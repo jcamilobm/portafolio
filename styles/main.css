@@ -1,0 +1,77 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  font-family: "Courier New", Courier, monospace;
+}
+
+main{
+    width: 80%;
+    margin: 30px auto;
+}
+#sobreMi {
+  background: #fff;  
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+}
+.inicio__presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.inicio__nombre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.inicio-descripcion{
+    width: 500px;
+    font-size: 1.5rem;
+}
+
+
+.inicio__foto img {
+  margin-right: 16px;
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* skills */
+/* con boostrap */
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    button {
+        padding: 10px 22px;
+        font-size: 14px;
+      }
+
+    #sobreMi {
+        width: 100%;
+    }
+    .inicio__presentacion h1 {
+    font-size: 1.5rem;
+    }
+    .inicio-descripcion{
+        width: 300px;
+        font-size: 1.1rem;
+    }
+}
