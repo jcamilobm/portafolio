@@ -1,0 +1,353 @@
+/* custom properties */
+:root {
+    /* fuentes */
+    --fuentePrincipal:'Roboto', sans-serif ;
+    --fuenteSecundaria:'Lato', sans-serif;
+
+    --separacion:5rem;
+
+    /* paleta de colores */
+    --primario:#1073BA;
+    --secundario:#201e1a;
+    --gris:#3B3B3B;
+    --blanco:#FFF;
+    --negro:#1F1E1E;
+    --grisClaro:#e1e1e1
+}
+
+html {
+    box-sizing: border-box; /* width real = widh dado+border+padding*/
+    font-size: 62.5%;  /*convierte 1rem en 10px*/
+}
+*, *:before,*:After {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* ---------------------------------------------- */
+/* GLOBALES */
+
+.wrapper {
+    max-width:120rem;  /* Nunca pasa de 1200px */
+    width: 90%;        /* Toma el 90% de lo que hay disponible*/
+    margin: 0 auto;     /* alinear horizontalmente */
+ }
+
+ a {
+     text-decoration: none;
+     cursor: pointer;
+ }
+ li {
+    list-style: none;
+ }
+
+ img {
+    max-width: 100%;
+    display: block;
+    height: auto; /*para que la iamgen sea proporcional */
+}
+
+.btn {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color:#333;
+    background-color: #fff;
+    border:0.3rem solid #333;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    transition: background 0.8s;
+}
+.btn:hover{
+    background: var(--primario);
+    color: var(--blanco);
+}
+
+.subtitles {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    border-bottom: 0.3rem solid var(--secundario);
+    text-shadow: 0.2rem 0.2rem 1rem #555;
+    transform:skew(-8deg);
+}
+
+ /* ---------------------------------------------- */
+ 
+ /* HEADER */
+ 
+ .home {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url(images/bg.jpg) center no-repeat;
+    background-size: cover;
+  }
+
+.navbar-links {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     background-color: var(--secundario);
+     margin: 0;
+     padding: 2rem;
+ }
+
+ .navbar-link {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color:var(--blanco);
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s;
+}
+.navbar-link:hover{
+    color: #fff;
+}
+.navbar-link::before {
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    background-color: #fff;
+    position: absolute;
+    right: -10%;
+    bottom: -0.2rem;
+    transition: width 0.2s;
+}
+.navbar-link:hover::before{
+    width: 120%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.title-about {
+    font-size: 3rem;
+    color: var(--primario);
+    background-color: var(--grisClaro);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    border-bottom: 0.3rem solid var(--secundario);
+    text-shadow: 0.2rem 0.2rem 1rem #555;
+    transform:skew(-8deg);
+}
+@media (min-width: 768px) {
+    .title-about {
+        font-size: 6rem;
+    }
+}
+
+.img-about {
+    width: 25rem;
+    height: 25rem;
+    border-radius:50%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.name-about {
+    font-size: 2rem;
+    color:var(--primario);
+    background-color: var(--grisClaro);
+    margin: 5rem 0;
+    padding: 0.5rem 3rem;
+    letter-spacing: 0.3rem;
+    transform: skew(-10deg);
+}
+@media (min-width: 768px) {
+    .name-about{font-size: 2.8rem;}
+}
+
+/* --------------------------- */
+
+/* SKILLS */
+.skills {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0 1rem 0;
+    background-color: var(--grisClaro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-heading {
+    font-size: 3.5rem;
+    color:#333;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.3rem solid #333;
+    text-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+
+.progress-bars-wrapper {
+    margin-bottom: 10rem;
+}
+.progress-bar {
+    width: 30rem;
+    height: 4rem;
+    background-color: #ccc;
+    margin: 1.5rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 1rem #555;
+    position: relative;
+}
+@media (min-width: 768px) {
+    .progress-bar {
+        width: 45rem;
+    }
+}
+.progress-text {
+    position:absolute;
+    left:1rem;
+    font-size: 1.5rem;
+    color:#fff
+}
+
+.progress-text span {
+    margin:0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.progress-percent {
+    height: 100%;
+    background-color: var(--primario);
+    border-radius: 0.3rem;
+}
+.progress-percent.js{ 
+    width: 70%;  /*este width cambia con js*/
+}
+.progress-percent.html{ 
+    width: 75%;  /*este width cambia con js*/
+}
+.progress-percent.css{ 
+    width: 65%;  /*este width cambia con js*/
+}
+.progress-percent.sql{ 
+    width: 60%;  /*este width cambia con js*/
+}
+.progress-percent.git{ 
+    width: 60%;  /*este width cambia con js*/
+}
+.progress-percent.python{ 
+    width: 55%;  /*este width cambia con js*/
+}
+.progress-percent.react{ 
+    width: 25%;  /*este width cambia con js*/
+}
+.progress-percent.scrum{ 
+    width: 40%;  /*este width cambia con js*/
+}
+
+/* --------------------------------- */
+
+/* portafolio */
+.projects  {
+    text-align: center;
+    padding-bottom: 5rem;
+} 
+.projects .subtitles {
+   display: inline-block;
+} 
+@media (min-width: 768px) {
+ .projects .subtitles {
+        font-size: 4rem;
+     } 
+}
+.project {
+    height: 30rem;
+}
+@media (min-width: 768px) {
+    .projects-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:1.5rem;
+    }
+}
+@media (min-width: 1000px) {
+    .projects-wrapper { 
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: #fff;
+    box-shadow: 0.3rem 0.3rem 0.5rem #777;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+}
+.project:hover{
+    box-shadow:1rem 1rem 1rem #777 ;
+}
+.project-text {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    top: -13rem;
+    transition: top 0.3s;
+}
+.project:hover .project-text{
+    top: 5rem;
+    transition: top 0.3s 0.3s;
+}
+
+.project-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color:#333;
+    text-transform: capitalize;
+}
+.project-technologies{
+    font-size: 1.8rem;
+    color:var(--primario)
+}
+.project-img {
+    width: 40rem;
+    transition: opacity 0.3s;
+}
+.project:hover .project-img {
+    opacity: 0.2;
+}
+
+.project-link {
+    margin: 0 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.1rem;
+    border:0.3rem solid var(--primario);
+    padding:0 1rem;
+    background-color: #fff;
+}
+
+.wrapper-links {
+    position: absolute;
+    bottom: -5rem;
+    transition: bottom 0.3s;
+}
+.project:hover .wrapper-links {
+    bottom: 5rem;
+    transition: bottom 0.3s 0.3s;
+}
