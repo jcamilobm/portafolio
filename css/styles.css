@@ -280,7 +280,7 @@ body {
         gap:1.5rem;
     }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px){
     .projects-wrapper { 
         grid-template-columns: repeat(3,1fr);
     }
