@@ -87,11 +87,11 @@ body {
      justify-content: space-around;
      background-color: var(--secundario);
      margin: 0;
-     padding: 2rem;
+     padding: 1.3rem;
  }
 
  .navbar-link {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color:var(--blanco);
     letter-spacing: 0.3rem;
@@ -124,10 +124,10 @@ body {
     margin-bottom: 2rem;
 }
 
-.title-about {
-    font-size: 3rem;
+.name-about {
+    font-size: 2.5rem;
     color: var(--primario);
-    background-color: var(--grisClaro);
+    /* background-color: var(--grisClaro); */
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     border-bottom: 0.3rem solid var(--secundario);
@@ -135,8 +135,8 @@ body {
     transform:skew(-8deg);
 }
 @media only screen and (min-width: 768px) {
-    .title-about {
-        font-size: 6rem;
+    .name-about {
+        font-size: 4rem;
     }
 }
 
@@ -148,17 +148,20 @@ body {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.name-about {
-    font-size: 2rem;
+.title-about  {
+    font-size: 1.7rem;
     color:var(--primario);
     background-color: var(--grisClaro);
-    margin: 5rem 0;
-    padding: 0.5rem 3rem;
+    margin: 3rem 0;
+    padding: 0.5rem 2.5rem;
     letter-spacing: 0.3rem;
     transform: skew(-10deg);
 }
 @media only screen and (min-width: 768px) {
-    .name-about{font-size: 2.8rem;}
+    .title-about {
+        font-size: 2.5rem;
+        margin: 5rem 0;     
+    }
 }
 
 /* --------------------------- */
